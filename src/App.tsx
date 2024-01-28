@@ -30,17 +30,18 @@ function App() {
       </div>
       <h1>Vite + Rune</h1>
       <div className="card">
-        <button onClick={() => Rune.actions.increment({ amount: 1 })}>
-          count is {game.count}
-        </button>
+        count is {game.count.toFixed(4)}
+        <div>
+          <button onClick={() => Rune.actions.increment({ amount: 1 })}>Increment (😟)</button>
+        </div>
+        <div>
+          <button onClick={() => Rune.actions.set({ amount: 1 })}>Set (😀)</button>
+        </div>
         <p>
-          Edit <code>src/App.tsx</code> or <code>src/logic.ts</code> and save to
-          test HMR
+          Edit <code>src/App.tsx</code> or <code>src/logic.ts</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and Rune logos to learn more
-      </p>
+      <p className="read-the-docs">Click on the Vite and Rune logos to learn more</p>
     </>
   )
 }
